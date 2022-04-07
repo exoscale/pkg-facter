@@ -1,3 +1,9 @@
+facter (2.4.6-1+bionic0+exo2) bionic; urgency=medium
+
+  * Exclude cali, pbr, vxlan and vnet interfaces facts
+
+ -- Alexandros Afentoulis <alexandros.afentoulis@exoscale.ch>  Thu, 07 Apr 2022 11:36:02 +0300
+
 facter (2.4.6-1+bionic0+exo1) bionic; urgency=medium
 
   * Rebuild for Bionic.
