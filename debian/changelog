@@ -1,3 +1,9 @@
+facter (2.4.6-1+jammy0+exo1) jammy; urgency=medium
+
+  * Rebuild for jammy.
+
+ -- Alexandros Afentoulis <alexandros.afentoulis@exoscale.ch>  Tue, 31 May 2022 15:51:53 +0300
+
 facter (2.4.6-1+focal0+exo2) focal; urgency=medium
 
   * Exclude Calico, Cloudstack public bridge, VXLAN and QEMU tap interfaces facts
