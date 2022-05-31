@@ -1,2 +1,3 @@
 0001-Do-not-require-rubygems.patch
 0002-Exclude-cali-pbr-vxlan-vnet-interfaces-facts.patch
+0003-Let-install-rb-be-ruby-3-compatible.patch

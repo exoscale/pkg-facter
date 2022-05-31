@@ -1,0 +1,26 @@
+--- facter-2.4.6.orig/install.rb
++++ facter-2.4.6/install.rb
+@@ -82,9 +82,9 @@ def do_libs(libs, strip = 'lib/')
+   libs.each do |lf|
+     olf = File.join(InstallOptions.site_dir, lf.gsub(/^#{strip}/, ''))
+     op = File.dirname(olf)
+-    FileUtils.makedirs(op, {:mode => 0755, :verbose => true})
++    FileUtils.makedirs(op, :mode => 0755, :verbose => true)
+     FileUtils.chmod(0755, op)
+-    FileUtils.install(lf, olf, {:mode => 0644, :preserve => true, :verbose => true})
++    FileUtils.install(lf, olf, :mode => 0644, :preserve => true, :verbose => true)
+   end
+ end
+ 
+@@ -93,9 +93,9 @@ def do_man(man, strip = 'man/')
+   man.each do |mf|
+     omf = File.join(InstallOptions.man_dir, mf.gsub(/#{strip}/, ''))
+     om = File.dirname(omf)
+-    FileUtils.makedirs(om, {:mode => 0755, :verbose => true})
++    FileUtils.makedirs(om, :mode => 0755, :verbose => true)
+     FileUtils.chmod(0755, om)
+-    FileUtils.install(mf, omf, {:mode => 0644, :preserve => true, :verbose => true})
++    FileUtils.install(mf, omf, :mode => 0644, :preserve => true, :verbose => true)
+     gzip = %x{which gzip}
+     gzip.chomp!
+     %x{#{gzip} -f #{omf}}
