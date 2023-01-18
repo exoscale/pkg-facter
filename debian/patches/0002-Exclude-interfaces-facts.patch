@@ -1,9 +1,4 @@
-From c033ab20cce21822a46fc21948f8a8cf09421077 Mon Sep 17 00:00:00 2001
-From: Alexandros Afentoulis <alexandros.afentoulis@exoscale.ch>
-Date: Tue, 5 Apr 2022 19:53:10 +0300
-Subject: [PATCH] Exclude cali, pbr, vxlan and vnet interfaces facts
-
-Calico, Cloudstack public bridge, VXLAN and QEMU tap interfaces
+Calico, Cloudstack public bridge, VXLAN, QEMU tap and Tailscale interfaces
 facts are not used/referenced in Puppet codebase; let's remove
 them altogether. Unfortunately this is hardcoded in facter's code
 and not brought from a configuration file.
@@ -15,17 +10,13 @@ diff --git a/lib/facter/interfaces.rb b/lib/facter/interfaces.rb
 index ab9d9e1..f7cf49c 100644
 --- a/lib/facter/interfaces.rb
 +++ b/lib/facter/interfaces.rb
-@@ -39,6 +39,10 @@ end
+@@ -39,6 +39,9 @@ end
 
  Facter::Util::IP.get_interfaces.each do |interface|
 
-+  # Exclude Calico interface, Cloudstack public bridge interfaces,
-+  # VXLAN interfaces and QEMU (vnet) tap interfaces
-+  next if interface =~ /cali|pbr|vxlan|vnet/
++  # Exclude unwanted interfaces
++  next if interface =~ /cali|pbr|tailscale|vnet|vxlan/
 +
    # Make a fact for each detail of each interface.  Yay.
    #   There's no point in confining these facts, since we wouldn't be able to create
    # them if we weren't running on a supported platform.
---
-2.25.1
-
