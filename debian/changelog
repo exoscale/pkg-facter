@@ -1,3 +1,9 @@
+facter (2.4.6-1+bionic0+exo1) bionic; urgency=medium
+
+  * Rebuild for Bionic.
+
+ -- Vincent Bernat <bernat@debian.org>  Tue, 01 May 2018 16:55:59 +0200
+
 facter (2.4.6-1) unstable; urgency=medium
 
   * Imported upstream release 2.4.6
