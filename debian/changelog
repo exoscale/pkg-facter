@@ -1,3 +1,9 @@
+facter (2.4.6-1+bionic0+exo3) bionic; urgency=low
+
+  * Also exclude Tailscale interfaces facts
+
+ -- Cédric Dufour <cedric.dufour@exoscale.ch>  Tue, 17 Jan 2023 11:19:17 +0100
+
 facter (2.4.6-1+bionic0+exo2) bionic; urgency=medium
 
   * Exclude cali, pbr, vxlan and vnet interfaces facts
