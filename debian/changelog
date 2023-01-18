@@ -1,3 +1,9 @@
+facter (2.4.6-1+xenial0+exo4) xenial; urgency=low
+
+  * Exclude Tailscale IPv6 addresses
+
+ -- Cédric Dufour <cedric.dufour@exoscale.ch>  Wed, 18 Jan 2023 14:49:14 +0100
+
 facter (2.4.6-1+xenial0+exo3) xenial; urgency=low
 
   * Also exclude Tailscale interfaces facts

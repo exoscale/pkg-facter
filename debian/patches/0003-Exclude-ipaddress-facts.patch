@@ -1,0 +1,15 @@
+We do not want Tailscale IPv6 addresses to show up in Puppet realm.
+Unfortunately this can only be hardcoded in facter's code.
+
+--- a/lib/facter/ipaddress6.rb
++++ b/lib/facter/ipaddress6.rb
+@@ -28,7 +28,8 @@
+ 
+   String(output).scan(/#{token}\s?((?>[0-9,a-f,A-F]*\:{1,2})+[0-9,a-f,A-F]{0,4})/).each do |match|
+     match = match.first
+-    unless match =~ /^fe80.*/ or match == "::1"
++    # Exclude unwanted IP addresses
++    unless match =~ /^fe80.*/ or match =~ /^fd7a:115c:a1e0:ab12:.*/ or match == "::1"
+       ip = match
+       break if return_first
+     end
