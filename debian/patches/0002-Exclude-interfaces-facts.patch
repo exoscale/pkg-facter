@@ -1,0 +1,22 @@
+Calico, Cloudstack public bridge, VXLAN, QEMU tap and Tailscale interfaces
+facts are not used/referenced in Puppet codebase; let's remove
+them altogether. Unfortunately this is hardcoded in facter's code
+and not brought from a configuration file.
+---
+ lib/facter/interfaces.rb | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/lib/facter/interfaces.rb b/lib/facter/interfaces.rb
+index ab9d9e1..f7cf49c 100644
+--- a/lib/facter/interfaces.rb
++++ b/lib/facter/interfaces.rb
+@@ -39,6 +39,9 @@ end
+
+ Facter::Util::IP.get_interfaces.each do |interface|
+
++  # Exclude unwanted interfaces
++  next if interface =~ /cali|pbr|tailscale|vnet|vxlan/
++
+   # Make a fact for each detail of each interface.  Yay.
+   #   There's no point in confining these facts, since we wouldn't be able to create
+   # them if we weren't running on a supported platform.

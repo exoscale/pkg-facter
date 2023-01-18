@@ -1,3 +1,21 @@
+facter (2.4.6-1+xenial0+exo3) xenial; urgency=low
+
+  * Also exclude Tailscale interfaces facts
+
+ -- Cédric Dufour <cedric.dufour@exoscale.ch>  Wed, 18 Jan 2023 12:01:12 +0100
+
+facter (2.4.6-1+xenial0+exo2) xenial; urgency=low
+
+  * Exclude cali, pbr, vxlan and vnet interfaces facts
+
+ -- Cédric Dufour <cedric.dufour@exoscale.ch>  Wed, 18 Jan 2023 11:57:52 +0100
+
+facter (2.4.6-1+xenial0+exo1) xenial; urgency=low
+
+  * Rebuild for Xenial.
+
+ -- Cédric Dufour <cedric.dufour@exoscale.ch>  Wed, 18 Jan 2023 10:16:19 +0100
+
 facter (2.4.6-1) unstable; urgency=medium
 
   * Imported upstream release 2.4.6
