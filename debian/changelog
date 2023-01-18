@@ -1,8 +1,8 @@
-facter (2.4.6-1+bionic0+exo1) bionic; urgency=medium
+facter (2.4.6-1+xenial0+exo1) xenial; urgency=low
 
-  * Rebuild for Bionic.
+  * Rebuild for Xenial.
 
- -- Vincent Bernat <bernat@debian.org>  Tue, 01 May 2018 16:55:59 +0200
+ -- Cédric Dufour <cedric.dufour@exoscale.ch>  Wed, 18 Jan 2023 10:16:19 +0100
 
 facter (2.4.6-1) unstable; urgency=medium
 
