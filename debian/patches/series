@@ -1,2 +1,1 @@
-0001-Do-not-require-rubygems.patch
-0002-Exclude-cali-pbr-vxlan-vnet-interfaces-facts.patch
+0002-Exclude-interfaces-facts.patch
