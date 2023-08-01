@@ -1,0 +1,19 @@
+Author: Alexandros Afentoulis <alexandros.afentoulis@exoscale.ch>
+Last-Update: 2023-07-31
+
+Prevent legacy facter from looking up in /opt/puppetlabs directory
+where modern puppet-agent binaries are placed. This was actually
+causing legacy facter to misbehave for fact `virtual` when
+`/.dockerenv` file was present on hypervisors.
+
+--- facter-2.4.6.orig/lib/facter/util/config.rb
++++ facter-2.4.6/lib/facter/util/config.rb
+@@ -80,7 +80,7 @@ module Facter::Util::Config
+     if Facter::Util::Config.is_windows?
+       @override_binary_dir = nil
+     else
+-      @override_binary_dir = "/opt/puppetlabs/puppet/bin"
++      @override_binary_dir = nil
+     end
+   end
+ 
