@@ -1,3 +1,4 @@
 0001-Do-not-require-rubygems.patch
 0002-Exclude-interfaces-facts.patch
 0003-Exclude-ipaddress-facts.patch
+0004-remove_puppetlabs_directory_override.patch

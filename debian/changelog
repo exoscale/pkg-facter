@@ -1,3 +1,9 @@
+facter (2.4.6-1+bionic0+exo5) bionic; urgency=medium
+
+  * Remove puppetlabs directory override
+
+ -- Alexandros Afentoulis <alexandros.afentoulis@exoscale.ch>  Wed, 02 Aug 2023 15:12:36 +0300
+
 facter (2.4.6-1+bionic0+exo4) bionic; urgency=low
 
   * Exclude Tailscale IPv6 addresses
